@@ -18,7 +18,7 @@
             return false;
         }
     
-        if (!preg_match('@[!#$%^&*(),.?":{}|<>]@', $password)) {
+        if (!preg_match('@[!#$%^&*(),.?":{}|_<>]@', $password)) {
             return false;
         }
     
@@ -27,16 +27,17 @@
 
     $passer="";
     $usrer="";
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $users = json_decode(file_get_contents('accounts.json'), true);
         $name=$_POST['name'];
         $username=$_POST['username'];
         $password=$_POST['password'];
         $sex=$_POST['sex'];
         $date=$_POST['date'];
+
         foreach($users as $i){
-            if($users['username']==$username){
-                $userer="An account with this username already exists, please choose another username";
+            if($i['username']==$username){
+                $usrer="An account with this username already exists, please choose another username";
                 break;
             }
         }
@@ -228,14 +229,16 @@
             <p style="color: red;"><?php echo $passer; ?></p>
         <?php endif; ?>
 
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="date" required>
+
         <label for="sex">Sex:</label>
         <select name="sex" required>
             <option value="male">Male</option>
             <option value="female">Female</option>
         </select>
 
-        <label for="date">Date of Birth:</label>
-        <input type="date" name="date" required>
+        
 
         <button type="submit">Sign Up</button>
 
