@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
 
+include('head.php'); 
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['logout'])) {
+    session_unset();
+    session_destroy();
+    header('Location: index.html');
+    exit();
+}
+$username = $_SESSION['username'];
+
+
+?>
 <head>
+    <title>Home Page</title>
 <style>
 body{
 color: #40514E;
@@ -10,64 +28,7 @@ text-align: center;
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-header {
-    background-image: url('back.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-color: #fff;
-text-align: center;
-padding: 50px;
-}
 
-.menu-container {
-display: flex;
-background-color: #3c72ac;
-float: left;
-}
-
-.dropdown-btn {
-background: none;
-border: none;
-color: #fff;
-cursor: pointer;
-font-size: 20px;
-padding: 15px;
-text-align: center;
-}
-
-h1.title {
-color: #f3f2f2;
-margin: 0;
-text-align: center;
-}
-
-.dropdown-menu {
-display: none;
-position: absolute;
-background-color: #76b8ff;
-list-style: none;
-float: right;
-margin: 0;
-padding: 0;
-}
-
-.dropdown-menu li {
-padding: 10px;
-}
-
-.dropdown-menu a {
-color: #fff;
-text-decoration: none;
-}
-
-.dropdown-menu a:hover {
-text-decoration: none;
-}
-
-.dropdown-btn:hover + .dropdown-menu,
-.dropdown-menu:hover {
-display: block;
-}
 
 .container {
 display: flex;
@@ -130,21 +91,7 @@ padding: 20px 0px;
 </head>
 
 <body>
-<header>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Husen Shaito - Portfolio</title>
-<nav>
-<div class="menu-container">
-<button class="dropdown-btn">Menu</button>
-<ul class="dropdown-menu">
-<li><a href="cv.html">Cv</a></li>
-<li><a href="Gallery.html">Gallery</a></li>
-</ul>
-</div>
-</nav>
-<h1 class="title">Welcome to Husen Shaito's Portfolio</h1>
-</header>
+
 
 <div class="container">
 <div class="box">
@@ -161,7 +108,7 @@ better, I hope you find this portfolio both informative and inspiring.</p>
 <div class="middle-container">
 <hr>
 <div class="contact-me">
-<h3>Find my contact details below</h3>
+<p style="color: #3c72ac; font-size:20px;">Find my contact details below</h3>
 <p>For any job, project, programs feel free and</p>
 <a class="btn" href="mailto:husenshaito@gmail.com">Send me an email :)</a>
 </div>

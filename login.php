@@ -9,7 +9,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
     foreach($users as $i){
         if($i['username']===$username && password_verify($password, $i['password'])){
             $_SESSION['username'] = $username;
-            header('location: portofolio.php');
+            header('location: mainpage.php');
             exit;
         }
     }
@@ -161,10 +161,5 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
 
     </form>
 </body>
-
-
-
-
-
 
 </html>
