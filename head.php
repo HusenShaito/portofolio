@@ -64,7 +64,7 @@ color:3c72ac;
 display: block;
 }
 
-        img {
+        .imag {
                 width: 130px;
                 height: auto;
                 position: absolute;
@@ -96,7 +96,7 @@ display: block;
                 font-weight:bold;   
             }
 
-            h1 {
+            .h1 {
             color: #f3f2f2;
             text-align:center;
             font-family: "Georgia", sans-serif;
@@ -127,7 +127,7 @@ display: block;
             }
             ?>
         </div>
-            <img src="images/lion.jpg" alt="Husen Shaito">
+            <img src="images/lion.jpg" alt="Husen Shaito" class="imag">
             <nav>
                 <div class="menu-container">
                     <button class="dropdown-btn">Menu</button>
