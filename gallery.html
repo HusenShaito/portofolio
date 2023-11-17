@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+
+.menu-container {
+display: flex;
+background-color: #3c72ac;
+float: left;
+margin-top:-65px;
+}
+
+.dropdown-btn {
+background: none;
+border: none;
+color: #fff;
+cursor: pointer;
+font-size: 20px;
+padding: 15px;
+text-align: center;
+}
+
+h1.title {
+color: #f3f2f2;
+margin: 0;
+text-align: center;
+}
+
+.dropdown-menu {
+display: none;
+position: absolute;
+background-color: #76b8ff;
+list-style: none;
+float: right;
+margin: 0;
+padding: 0;
+}
+
+.dropdown-menu li {
+padding: 10px;
+}
+
+.dropdown-menu a {
+color: #fff;
+text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+text-decoration: none;
+}
+
+.dropdown-btn:hover + .dropdown-menu,
+.dropdown-menu:hover {
+display: block;
+}
+    </style>
+</head>
+
+<header>
+    <h1><strong>Tap on the image to view it</strong></h1>
+    <nav>
+        <div class="menu-container">
+        <button class="dropdown-btn">Menu</button>
+        <ul class="dropdown-menu">
+        <li><a href="cv.html">Cv</a></li>
+        <li><a href="webb.html">Portofoliio</a></li>
+        </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div class="photo-container">
+        <div class="photothumbnail">
+            <a href="image2.jpg" target="_self">
+                <img src="image2.jpg" alt="Image 1">
+            </a>
+        </div>
+        <div class="photothumbnail">
+            <a href="image3.jpg" target="_self">
+                <img src="image3.jpg" alt="Image 2">
+            </a>
+        </div>
+        <div class="photothumbnail">
+            <a href="image1.jpg" target="_self">
+                <img src="image1.jpg" alt="Image 3">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
