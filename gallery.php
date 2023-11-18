@@ -1,7 +1,8 @@
-<!DOCTYPE html>
-<?php include('head.php'); ?>
 
-<html>
+<?php include('head.php'); ?>
+<!DOCTYPE html>
+
+<html lang="en">
 <head>
     <title>Gallery</title>
 <link rel="stylesheet" href="styles/gallerystyle.css">

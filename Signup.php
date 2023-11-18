@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
     function isStrongPassword($password) {
         if (strlen($password) < 8) {
@@ -68,6 +66,9 @@
     }
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
 
 <head>
     <meta charset="UTF-8">

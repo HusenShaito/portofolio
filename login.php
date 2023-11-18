@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']== 'POST'){
 
 <body>
     <header>
-    <a href="signup.php" class="Signupbutton"> Signup </a>
+    <a href="Signup.php" class="Signupbutton"> Signup </a>
     <a href="index.php" class="mainpage"> Main Page </a>
     </header>
     <form method="post" action="">

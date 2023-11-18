@@ -132,9 +132,9 @@ display: block;
                 <div class="menu-container">
                     <button class="dropdown-btn">Menu</button>
                     <ul class="dropdown-menu">
-                        <li><a href="MainPage.php">Home</a></li>
-                        <li><a href="CV.php">CV</a></li>
-                        <li><a href="Gallery.php">Gallery</a></li>
+                        <li><a href="mainpage.php">Home</a></li>
+                        <li><a href="cv.php">CV</a></li>
+                        <li><a href="gallery.php">Gallery</a></li>
                     </ul>
                 </div>
             </nav>  

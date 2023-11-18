@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <?php
 
 include('head.php'); 
@@ -18,6 +16,9 @@ $username = $_SESSION['username'];
 
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <title>Home Page</title>
     <link rel="stylesheet" href="styles/mainpagestyle.css">
